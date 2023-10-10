@@ -10,6 +10,50 @@
 
 </head>
 <body>
+<div class="container mt-5">
+    <h1 class="mb-4">Formulario de Registro de Usuarios</h1>
+    <form action="db.php" method="POST">
+        <div class="mb-3">
+            <label for="user_id" class="form-label">ID de usuario:</label>
+            <input type="text" class="form-control" id="user_id" name="user_id" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="surname" class="form-label">Apellido:</label>
+            <input type="text" class="form-control" id="surname" name="surname" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="rol" class="form-label">Rol:</label>
+            <select class="form-select" id="rol" name="rol">
+                <option value="alumnat">Alumnat</option>
+                <option value="professorat">Professorat</option>
+            </select>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="active" name="active" value="1">
+            <label class="form-check-label" for="active">Activo</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+</div>
 
 </body>
 </html>
