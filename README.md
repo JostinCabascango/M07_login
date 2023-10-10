@@ -11,9 +11,9 @@
 
 ## Forumulario
 
-![alt](img/BBDD_formulario.png)
+![alt](img/formulario.png)
 
 ## Resultado Formulario
 
-![alt](img/BBDD_Resultado.png)
+![alt](img/Resultado.png)
 
