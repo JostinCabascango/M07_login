@@ -14,4 +14,14 @@ if (!$conexion) {
 } else {
     echo "Conexion realizada correctamente";
 }
+// Recogemos los datos del formulario.html y los guardamos en variables
+$user_id = $_POST['user_id'];
+$name = $_POST['name'];
+$surname = $_POST['surname'];
+$password = $_POST['password'];
+$email = $_POST['email'];
+// Recibimos el rol del usuario (alumno o profesor)
+$rol = $_POST['rol'];
+// Comprobamos si el usuaio esta activo o no
+$active = $_POST['active'];
 ?>
