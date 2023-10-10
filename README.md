@@ -2,4 +2,18 @@
 
 ## Afegint captura de pantalla de la BBDD a phpmyadmin ABANS d’afegir dades
 
-[img]
+![alt](img/BBDD_antes_añadir.png)
+
+
+## Afegir captura de pantalla de la BBDD a phpmyadmin DESPRÉS d’afegir dades
+
+![alt](img/BBDD_despues_anadir.png)
+
+## Forumulario
+
+![alt](img/BBDD_formulario.png)
+
+## Resultado Formulario
+
+![alt](img/BBDD_Resultado.png)
+
