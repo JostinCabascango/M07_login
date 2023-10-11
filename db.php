@@ -24,6 +24,7 @@
         $name = $_POST["name"];
         $surname = $_POST["surname"];
         $password = $_POST["password"];
+        $email = $_POST["email"];
         $rol = $_POST["rol"];
         if (isset ($_POST["active"])){
             $active = 1;
@@ -31,8 +32,8 @@
         else {
             $active = 0;
         }
-        $query = "INSERT INTO user (user_id,name,surname,password,rol,active)
-        VALUES('$user_id','$name','$surname','$password','$rol','$active')";
+        $query = "INSERT INTO user (user_id,name,surname,password,email,rol,active)
+        VALUES('$user_id','$name','$surname','$password','$email','$rol','$active')";
 
         if (mysqli_query($connect,$query))
         {
