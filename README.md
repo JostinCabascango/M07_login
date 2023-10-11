@@ -9,15 +9,21 @@ estado de activación del usuario.
 
 ## Capturas de Pantalla
 
-- Captura de pantalla que muestra la ejecución del archivo en el explorador
-  web.![Ejecucion_en_la_web](img/formulario.png).
-  ![Ejecucion_en_la_web](img/Resultado.png).
+- Captura de pantalla que muestra la ejecución del archivo en el explorador web.
+
+### ![Ejecucion_en_la_web](img/formulario.png).
+
+### ![Ejecucion_en_la_web](img/Resultado.png).
 
 - Captura de pantalla de phpMyAdmin antes de agregar datos a la tabla "
-  user". ![Estado Inicial de la Base de Datos](img/BBDD_antes_añadir.png)
+  user".
+
+### ![Estado Inicial de la Base de Datos](img/BBDD_antes_añadir.png)
 
 - Captura de pantalla de phpMyAdmin después de agregar datos a la tabla "
-  user". ![Estado Final de la Base de Datos](img/BBDD_despues_anadir.png).
+  user".
+
+### ![Estado Final de la Base de Datos](img/BBDD_despues_anadir.png).
 
 ## Requisitos
 
