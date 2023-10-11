@@ -24,8 +24,8 @@
         $name = $_POST["name"];
         $surname = $_POST["surname"];
         $password = $_POST["password"];
-        $rol = $POST["rol"];
-        if (isset ($POST["active"])){
+        $rol = $_POST["rol"];
+        if (isset ($_POST["active"])){
             $active = 1;
         }
         else {
