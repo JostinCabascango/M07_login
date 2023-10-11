@@ -9,11 +9,11 @@
 
 ![alt](img/BBDD_despues_anadir.png)
 
-## Forumulario
+## Forumulari
 
 ![alt](img/formulario.png)
 
-## Resultado Formulario
+## Resultat del Formulari
 
 ![alt](img/Resultado.png)
 
