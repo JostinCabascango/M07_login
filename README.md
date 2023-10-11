@@ -1,19 +1,19 @@
-# PRÀCTICA 4 - ALTA USUARI AMB PHP I MYSQL
+# PRACTICA 4 - ALTAS DE USUARIOS CON PHP I MYSQL
 
-## Afegint captura de pantalla de la BBDD a phpmyadmin ABANS d’afegir dades
+## Captura de pantalla de la BBDD a phpmyadmin ANTES de añadir datos
 
 ![alt](img/BBDD_antes_añadir.png)
 
 
-## Afegir captura de pantalla de la BBDD a phpmyadmin DESPRÉS d’afegir dades
+## Captura de pantalla de la BBDD en phpmyadmin DESPUES de añadir datos
 
 ![alt](img/BBDD_despues_anadir.png)
 
-## Forumulari
+## Forumulario
 
 ![alt](img/formulario.png)
 
-## Resultat del Formulari
+## Resultado del Formulario
 
 ![alt](img/Resultado.png)
 
