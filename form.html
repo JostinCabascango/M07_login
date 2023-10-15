@@ -6,37 +6,41 @@
     <title>Formulario PHP</title>
   </head>
   <body>
-    <h2> Insertar alumno o profesor</h2>
+    <h3> Inserta alumno o profesor</h3>
 
     <form method="POST" action="db.php">
       <div>
-        <label>user_id</label>
+        <label>ID de usuario:</label>
         <input type="text" name="user_id" />
       </div>
       <div>
-        <label>name</label>
+        <label>Nombre:</label>
         <input type="text" name="name" />
       </div>
       <div>
-        <label>surname</label>
+        <label>Apellido:</label>
         <input type="text" name="surname" />
       </div>
       <div>
-        <label>password</label>
+        <label>Contraseña:</label>
         <input type="text" name="password" />
       </div>
       <div>
-        <label>rol</label>
+        <label>Correo Electronico:</label>
+        <input type="text" name="email" />
+      </div>
+      <div>
+        <label>Rol</label>
         <select name="rol">
           <option name="alumnat" value="alumnat">alumnat</option>
           <option name="professorat" value="professorat">professorat</option>
         </select>
       </div>
       <div>
-      <label>active</label>
+      <label>Activo:</label>
         <input type="checkbox" name="active" value="1" />
       </div>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Enviar" />
     </form>
   </body>
 </html>

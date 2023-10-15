@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Resultado</h1>
+    <h2>Resultado</h2>
     <h4>Se ha guardado el usuario correctamente</h4>
 </body>
 </html>
