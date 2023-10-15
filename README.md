@@ -19,6 +19,8 @@
 
 ## Requisitos
 
+
+
 - Servidor web con PHP y MySQL.
 - Acceso a phpMyAdmin para la gestión de la base de datos.
 
