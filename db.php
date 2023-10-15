@@ -8,6 +8,8 @@ define("DB_USER", "root"); // Usuario de la base de datos
 define("DB_PSW", ""); // Contraseña de la base de datos
 define("DB_PORT", 3306); // Puerto de la base de dato (3306)
 
+
+
 // Conexión a la base de datos utilizando las constantes definidas anteriormente
 $conexion = mysqli_conexion(DB_HOST, DB_USER, DB_PSW, DB_NAME, DB_PORT);
 
