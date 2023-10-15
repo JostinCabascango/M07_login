@@ -11,7 +11,7 @@
 
 ## Forumulario
 
-![alt](img/Formulario.png)
+![alt](img/formulario.png)
 
 ## Resultado del Formulario
 
