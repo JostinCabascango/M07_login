@@ -24,6 +24,7 @@
 
 ## Objetivos de la actividad
 
+
 * Crear tablas a través de phpmyadmin.
 * Insertar registros a través de php en una BBDD MySql.
 * Resolución de problemas.
