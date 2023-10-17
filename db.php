@@ -11,11 +11,11 @@ define("DB_PORT", 3306); // Puerto de la base de dato (3306)
 
 
 // Conexión a la base de datos utilizando las constantes definidas anteriormente
-$conexion = mysqli_conexion(DB_HOST, DB_USER, DB_PSW, DB_NAME, DB_PORT);
+$conexion = mysqli_connect(DB_HOST, DB_USER, DB_PSW, DB_NAME, DB_PORT);
 
 // Comprobar si la conexión a la base de datos fue exitosa
 if (!$conexion) {
-    echo "Error de conexión: " . mysqli_conexion_error();
+    echo "Error de conexión: " . mysqli_connect_error();
 } else {
     // Recuperar los datos del formulario a través del método POST
     echo "Conexion establecida correctamente";
