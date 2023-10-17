@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+</head>
+
+<body>
+  <h1>Iniciar sessió de l'usuari</h1>
+
+  <form method="POST" action="db.php">
+    <div>
+      <label>Email</label>
+      <input type="text" name="email" />
+    </div>
+    <div>
+      <label>Contraseña</label>
+      <input type="password" name="password" />
+    </div>
+    <div>
+      <label>Remember me</label>
+      <input type="checkbox" name="active" value="1" />
+    </div>
+    <div>
+      <input type="submit" value="Enviar" />
+    </div>
+  </form>
+  <a href="signIn.html">Crear usuari</a>
+</body>
+
+</html>
