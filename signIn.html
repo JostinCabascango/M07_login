@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn</title>
+  </head>
+  <body>
+    <h1>Crear un usuari</h1>
+
+    <form method="POST" action="db.php">
+      <div>
+        <label>Numero</label>
+        <input type="text" name="user_id" />
+      </div>
+      <div>
+        <label>Nom</label>
+        <input type="text" name="name" />
+      </div>
+      <div>
+        <label>Cognoms</label>
+        <input type="text" name="surname" />
+      </div>
+      <div>
+        <label>Contraseña</label>
+        <input type="text" name="password" />
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="text" name="email" />
+      </div>
+      <div>
+        <label>Rol</label>
+        <select name="rol">
+          <option name="alumnat" value="alumnat">alumnat</option>
+          <option name="professorat" value="professorat">professorat</option>
+        </select>
+      </div>
+      <div>
+      <label>Actiu</label>
+        <input type="checkbox" name="active" value="1" />
+      </div>
+      <input type="submit" value="Enviar" />
+    </form>
+    <a href="login.html">Iniciar sessió usuari</a>
+  </body>
+</html>
