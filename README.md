@@ -13,6 +13,26 @@ El proyecto consta de tres archivos principales:
 1. `login.html`: Este es el formulario de inicio de sesión que recoge el correo electrónico y la contraseña del usuario.
 2. `validarUsuario.php`: Este archivo se encarga de validar las credenciales del usuario contra la base de datos.
 3. `dbConf.php`: Este archivo contiene las constantes para la conexión a la base de datos.
+   
+## Capturas de Pantalla
+
+- Captura de pantalla que muestra el login.
+  ![Ejecucion_en_la_web](img/formularioLogin.png).
+
+- Captura que muestra un mensaje de error si las credenciales son incorrectas.
+  ![Ejecucion_en_la_web](img/loginIncorrecte.png).
+
+- Captura del usuario cuando es alumno.
+![perfil_usuario](img/perfilUsuario.png)
+
+- Captura del usuario cuando es professor.
+![perfil_professor](img/perfilProfessor.png)
+
+- Captura del formulario para insertar usuarios.
+   ![crear_usuario](img/insertarUsuario.png)
+
+- Captura que muestra si el usuario se ha creado correctamente.
+   ![crear_usuario](img/mensajeConfirmacionInsertarUsuario.png)
 
 ## Cómo usar
 
