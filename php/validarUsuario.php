@@ -18,7 +18,7 @@ try {
             header("Location: perfil.php?email=$email");
         } else {
             // Si la consulta no devuelve un resultado, se redirige a la página de login.html
-           include 'login.html';
+           include '../templates/login.html';
             echo "Login incorrecte";
         }
 

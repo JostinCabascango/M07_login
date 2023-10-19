@@ -28,9 +28,7 @@ try {
             header('Location: resultado.php');
         } else {
             // Si la consulta no se ejecuta correctamente, mostrar un mensaje de error
-            echo "Error al insertar datos " . mysqli_error($conn);
-
-            header('Location: singIn.html');
+            header('Location: ../templates/signIn.html');
         }
 
 

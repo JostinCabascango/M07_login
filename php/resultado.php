@@ -6,5 +6,5 @@
     <title>Resultado</title>
 </head>
 <body>
-<p>La inserció es correcte. <a href="login.html">Iniciar sessió usuari</a></p>
+<p>La inserció es correcte. <a href="../templates/login.html">Iniciar sessió usuari</a></p>
 </html>
