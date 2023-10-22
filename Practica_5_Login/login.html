@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Usuario</title>
+</head>
+<body>
+    <h1> Iniciar sesión usuario</h1>
+
+    <form method="POST" action="validarUsuario.php">
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" />
+        </div>
+        <div>
+            <label for="remember">Remember me</label>
+            <input type="checkbox" name="remember" id="remember" value="1" />
+        </div>
+        <input type="submit" value="Enviar" />
+        <div>
+            <a href="crearUsuario.html">Crear usuario</a>
+        </div>
+    </form>
+</body>
+</html>
