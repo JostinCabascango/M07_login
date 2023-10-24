@@ -3,6 +3,8 @@
 include 'dbConf.php';
 
 try {
+    //Iniciamos la sesion
+    session_start();
     // Definir la conexión a la base de datos
     $conn=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
     // Si la conexion es correcta, se recogen los datos del formulario del login
@@ -15,7 +17,17 @@ try {
         $resultado = mysqli_query($conn, $query);
         // Si la consulta devuelve un resultado, se redirige a la página de perfil.php
         if (mysqli_num_rows($resultado) > 0) {
-            header("Location: perfil.php?email=$email");
+            //Guardamos el nombre , rol y el user_id en la session
+            $row = mysqli_fetch_array($resultado);
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['rol'] = $row['rol'];
+            $_SESSION['user_id'] = $row['user_id'];
+            // Guardamos un boolean para identificar que el login es correcto
+            $_SESSION['LoggedIn']=true;
+            //Redirect a index.php
+            header("Location: index.php");
+
+
         } else {
             // Si la consulta no devuelve un resultado, se redirige a la página de login.html
            include '../templates/login.html';
