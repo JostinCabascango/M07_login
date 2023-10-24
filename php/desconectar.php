@@ -13,6 +13,8 @@ session_start();
 session_unset();
 //Destruir la sessió
 session_destroy();
+//Redirige al usuario a la página de inicio de sesión.
+header("Location: ../templates/login.html");
 ?>
 </body>
 </html>
