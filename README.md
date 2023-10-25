@@ -11,34 +11,28 @@ El objetivo de este proyecto es permitir el registro y la autenticación de usua
 El proyecto consta de tres archivos principales:
 
 1. `login.html`: Este es el formulario de inicio de sesión que recoge el correo electrónico y la contraseña del usuario.
-2. `validarUsuario.php`: Este archivo se encarga de validar las credenciales del usuario contra la base de datos.
+2. `validar.php`: Este archivo se encarga de validar las credenciales del usuario contra la base de datos.
 3. `dbConf.php`: Este archivo contiene las constantes para la conexión a la base de datos.
+4. `index.php`: Este archivo se encarga de mostrar la información del usuario que se encuentra en la base de datos.
    
 ## Capturas de Pantalla
 
-- Captura de pantalla que muestra el login.
-  ![Ejecucion_en_la_web](img/formularioLogin.png).
+- Ejemplo de un usuario que su rol es profesor.
+  ![Ejecucion_en_la_web](img/perfilProfessor.png).
 
-- Captura que muestra un mensaje de error si las credenciales son incorrectas.
-  ![Ejecucion_en_la_web](img/loginIncorrecte.png).
+- Ejemplo de un usuario que su rol es alumno.
+  ![Ejecucion_en_la_web](img/perfilAlumno.png).
 
-- Captura del usuario cuando es alumno.
-![perfil_usuario](img/perfilUsuario.png)
-
-- Captura del usuario cuando es professor.
-![perfil_professor](img/perfilProfessor.png)
-
-- Captura del formulario para insertar usuarios.
-   ![crear_usuario](img/insertarUsuario.png)
-
-- Captura que muestra si el usuario se ha creado correctamente.
-   ![crear_usuario](img/mensajeConfirmacionInsertarUsuario.png)
+- Ejemplo de la descripción de un usuario.
+  ![Ejecucion_en_la_web](img/descripcionUsuario.png).
+- Ejemplo de la url cuando se pasa por parametro el id del usuario a traves de un metodo GET.
+  ![Ejecucion_en_la_web](img/idPorMetodoGet.png).
 
 ## Cómo usar
 
 1. Abre el archivo `login.html` en tu navegador.
 2. Introduce tu correo electrónico y contraseña.
-3. Haz clic en "Submit".
+3. Haz clic en "Enviar".
 
 Si las credenciales son correctas, se te redirigirá a la página correspondiente según tu rol (estudiante o profesor). Si las credenciales son incorrectas, se te redirigirá a la página de inicio de sesión y se mostrará un mensaje de error.
 
