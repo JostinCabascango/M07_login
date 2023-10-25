@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,10 +74,8 @@
         } finally {
             // Cerrar la conexión a la base de datos
             mysqli_close($conn);
-
         }
     }
-
     ?>
 </div>
 </body>
