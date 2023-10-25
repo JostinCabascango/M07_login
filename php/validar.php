@@ -7,7 +7,7 @@ try {
     session_start();
     // Definir la conexión a la base de datos
     $conn=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
-    // Si la conexion es correcta, se recogen los datos del formulario del login
+    // Si la conexion es correcta, se recogen los datos del formulario de login
     if ($conn) {
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -41,7 +41,7 @@ try {
 } catch (Exception $e) {
     echo "Error de connexió a la base de dades: " . $e->getMessage();
 } finally {
-    // Cerrar la conexión a la base de datos
+    // Cierro la conexión a la base de datos
     mysqli_close($conn);
 }
 ?>
