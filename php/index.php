@@ -29,36 +29,56 @@
         <?php
         // Mostrar la tabla de usuarios de la base de datos
         include 'dbConf.php';
-        $conn=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
-        $query = "SELECT * FROM user";
-        $resultado = mysqli_query($conn, $query);
-        if (mysqli_num_rows($resultado) > 0) {
-            ?>
-            <table class="table mt-5">
-                <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Cognom</th>
-                    <th>Email</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-                foreach ($resultado as $user) {
-                    ?>
-                    <tr>
-                        <td><?php echo $user['name']; ?></td>
-                        <td><?php echo $user['surname']; ?></td>
-                        <td><?php echo $user['email']; ?></td>
-                    </tr>
-                    <?php
-                }
+        // Bloque try-catch para capturar excepciones
+        try{
+            $conn=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+            // Comprobar si la conexión es correcta
+            if (!$conn) {
+                throw new Exception("Error de connexió a la base de dades.");
+            }
+            // Consulta SQL para obtener todos los usuarios de la base de datos
+            $query = "SELECT * FROM user";
+            $resultado = mysqli_query($conn, $query);
+            // Comprobar si la consulta es correcta
+            if (!$resultado) {
+                throw new Exception("Error en la consulta a la base de dades.");
+            }
+            // Si la consulta devuelve un resultado, se muestra la tabla con los usuarios
+            if (mysqli_num_rows($resultado) > 0) {
                 ?>
-                </tbody>
-            </table>
-            <?php
+                <table class="table mt-5">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Cognom</th>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($resultado as $user) {
+                        ?>
+                        <tr>
+                            <td><?php echo $user['name']; ?></td>
+                            <td><?php echo $user['surname']; ?></td>
+                            <td><?php echo $user['email']; ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+                <?php
+            }
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        } finally {
+            // Cerrar la conexión a la base de datos
+            mysqli_close($conn);
+
         }
     }
+
     ?>
 </div>
 </body>
