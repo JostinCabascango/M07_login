@@ -31,7 +31,9 @@ try {
         } else {
             // Si la consulta no devuelve un resultado, se redirige a la página de login.html
            include '../templates/login.html';
-            echo "Login incorrecte";
+            ?>
+            <p class="text-primary fs-4">Login Incorrecte</p>
+<?php
         }
 
     }
