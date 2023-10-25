@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro</title>
+  <!-- CSS de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1 class="mt-5">Registro de usuario</h1>
+
+  <form method="POST" action="../php/registrarUsuario.php">
+    <div class="mb-3">
+      <label class="form-label">Numero</label>
+      <input type="number" name="user_id" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Nom</label>
+      <input type="text" name="name" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Cognoms</label>
+      <input type="text" name="surname" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Contraseña</label>
+      <input type="text" name="password" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" name="email" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Rol</label>
+      <select name="rol" class="form-select">
+        <option name="alumnat" value="alumnat">alumnat</option>
+        <option name="professorat" value="professorat">professorat</option>
+      </select>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" name="active" value="1" class="form-check-input"/>
+      <label class="form-check-label">Actiu</label>
+    </div>
+    <div class="mb-3">
+      <input type="submit" value="Enviar" class="btn btn-primary"/>
+    </div>
+    </form>
+    <a href="login.html">Iniciar sessió</a>
+</div>
+</body>
+</html>
+

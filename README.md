@@ -1,53 +1,48 @@
-# Alta de Usuarios con PHP y MySQL
+# Proyecto de Login y Registro de Usuarios con PHP y MySQL
+
+Este proyecto es la continuación del proyecto "Alta de Usuarios con PHP y MySQL". En este proyecto, se implementa una funcionalidad adicional para permitir a los usuarios iniciar sesión en el sistema.
 
 ## Descripción
 
-Este proyecto tiene como objetivo permitir el registro de usuarios (alumnado y profesorado) mediante un formulario PHP.
-Los datos se almacenan en una base de datos MySQL llamada "Users" en una tabla llamada "user". El formulario recopila
-información importante, como el nombre, apellido, contraseña, correo electrónico, rol (alumnat o professorat), y el
-estado de activación del usuario.
+El objetivo de este proyecto es permitir el registro y la autenticación de usuarios (estudiantes y profesores) mediante formularios PHP. Los datos se almacenan en una base de datos MySQL en una tabla llamada "users". Los formularios recopilan información importante, como el nombre, apellido, contraseña, correo electrónico y rol (estudiante o profesor).
 
+## Estructura del proyecto
+
+El proyecto consta de tres archivos principales:
+
+1. `login.html`: Este es el formulario de inicio de sesión que recoge el correo electrónico y la contraseña del usuario.
+2. `validar.php`: Este archivo se encarga de validar las credenciales del usuario contra la base de datos.
+3. `dbConf.php`: Este archivo contiene las constantes para la conexión a la base de datos.
+4. `index.php`: Este archivo se encarga de mostrar la información del usuario que se encuentra en la base de datos.
+   
 ## Capturas de Pantalla
 
-- Captura de pantalla que muestra la ejecución del archivo en el explorador web.
+- Ejemplo de un usuario que su rol es profesor.
+  ![Ejecucion_en_la_web](img/perfilProfessor.png).
 
-### ![Ejecucion_en_la_web](img/formulario.png).
+- Ejemplo de un usuario que su rol es alumno.
+  ![Ejecucion_en_la_web](img/perfilAlumno.png).
 
-### ![Ejecucion_en_la_web](img/Resultado.png).
+- Ejemplo de la descripción de un usuario.
+  ![Ejecucion_en_la_web](img/descripcionUsuario.png).
+- Ejemplo de la url cuando se pasa por parametro el id del usuario a traves de un metodo GET.
+  ![Ejecucion_en_la_web](img/idPorMetodoGet.png).
 
-- Captura de pantalla de phpMyAdmin antes de agregar datos a la tabla "
-  user".
+## Cómo usar
 
-### ![Estado Inicial de la Base de Datos](img/BBDD_antes_añadir.png)
+1. Abre el archivo `login.html` en tu navegador.
+2. Introduce tu correo electrónico y contraseña.
+3. Haz clic en "Enviar".
 
-- Captura de pantalla de phpMyAdmin después de agregar datos a la tabla "
-  user".
+Si las credenciales son correctas, se te redirigirá a la página correspondiente según tu rol (estudiante o profesor). Si las credenciales son incorrectas, se te redirigirá a la página de inicio de sesión y se mostrará un mensaje de error.
 
-### ![Estado Final de la Base de Datos](img/BBDD_despues_anadir.png).
+## Notas
 
-## Requisitos
+Asegúrate de tener una base de datos MySQL en funcionamiento y reemplaza los valores en `dbConf.php` con tus propios valores.
 
-- Servidor web con PHP y MySQL.
-- Acceso a phpMyAdmin para la gestión de la base de datos.
-
-## Instalación
-
-1. Clona este repositorio en tu servidor.
-2. Crea una base de datos MySQL llamada "Users".
-3. Dentro de la base de datos "Users", crea una tabla llamada "user" con los campos mencionados en la descripción.
-4. Configura la conexión a la base de datos en el archivo PHP.
-5. Abre el formulario en tu navegador y comienza a registrar usuarios.
-
-## Uso
-
-1. Abre el formulario de registro en tu navegador.
-2. Completa todos los campos requeridos, seleccionando el rol y el estado de activación.
-3. Envía el formulario.
-4. Si se completa correctamente, se redirigirá a una página que mostrará "S'ha guardat l'usuari correctament".
+Este código asume que tienes una tabla llamada `users` con las columnas `name`, `surname`, `email`, `password` y `role`. Asegúrate de adaptar el código a tu estructura de base de datos.
 
 ## Créditos
 
 - Autor: Jostin Fabian Cabascango Chavez
-- Autor: Marc Cuzcano
-- Repositorio GitHub Jostin: [Enlace a GitHub](https://github.com/JostinCabascango)
-- Repositorio GitHub Marc: [Enlace a GitHub](https://github.com/markis24)
+- Repositorio GitHub: [Enlace a GitHub](https://github.com/JostinCabascango)
