@@ -45,12 +45,13 @@
             // Si la consulta devuelve un resultado, se muestra la tabla con los usuarios
             if (mysqli_num_rows($resultado) > 0) {
                 ?>
-                <table class="table mt-5">
+                <table class="table table-striped table-hover table-bordered mt-5">
                     <thead>
                     <tr>
-                        <th>Nom</th>
-                        <th>Cognom</th>
-                        <th>Email</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Cognom</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Acció</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -61,6 +62,9 @@
                             <td><?php echo $user['name']; ?></td>
                             <td><?php echo $user['surname']; ?></td>
                             <td><?php echo $user['email']; ?></td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="mostrarUsuario.php?user_id=<?php echo $user['user_id'];?>">Mostrar informació</a>
+                            </td>
                         </tr>
                         <?php
                     }
