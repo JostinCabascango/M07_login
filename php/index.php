@@ -48,10 +48,10 @@
                 <table class="table table-striped table-hover table-bordered mt-5">
                     <thead>
                     <tr>
-                        <th scope="1">Nom</th>
-                        <th scope="1">Cognom</th>
-                        <th scope="1">Email</th>
-                        <th scope="1">Acció</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Cognom</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Acció</th>
                     </tr>
                     </thead>
                     <tbody>
