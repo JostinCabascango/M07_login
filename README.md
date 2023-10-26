@@ -30,11 +30,15 @@ El proyecto consta de tres archivos principales:
 
 ## Cómo usar
 
-1. Abre el archivo `login.html` en tu navegador.
-2. Introduce tu correo electrónico y contraseña.
-3. Haz clic en "Enviar".
+1. Abre el archivo `templates/login.html` en tu navegador.
+2. Introducir el correo electrónico y la contraseña del usuario en el formulario de inicio de sesión.
+3. Hacer clic en "Enviar".
+5. Si las credenciales son correctas, se redirige al usuario a la página correspondiente según su rol (estudiante o profesor).
+5. Si las credenciales son incorrectas, se redirige al usuario a la página de inicio de sesión y se muestra un mensaje de error.
+6. En la página correspondiente según el rol, se muestra un saludo con el nombre y el rol del usuario, y se ofrecen dos enlaces: uno para mostrar la información detallada del usuario y otro para desconectarse.
+7. Si se hace clic en el enlace para mostrar la información detallada del usuario, se redirige al usuario a una página donde se consultan a la base de datos todos los campos del usuario. Este enlace se hace a través del método GET pasando el valor de ID del usuario.
+8. Si se hace clic en el enlace para desconectarse, se redirige al usuario a un archivo PHP donde se cierra la sesión. Una vez hecho esto, se redirige al usuario a la página de inicio de sesión.
 
-Si las credenciales son correctas, se te redirigirá a la página correspondiente según tu rol (estudiante o profesor). Si las credenciales son incorrectas, se te redirigirá a la página de inicio de sesión y se mostrará un mensaje de error.
 
 ## Notas
 
