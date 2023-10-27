@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
     <!-- CSS de Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body>
-<div class="container">
-    <?php
-    // Iniciar la sesión
-    session_start();
-    // Si el rol es estudiante, se muestra el perfil del estudiante
-    if ($_SESSION['rol'] === 'alumnat') {
-        ?>
-        <h2 class="mt-5">Hola <?php echo $_SESSION['name']; ?>, ets un alumne</h2>
-        <a class="btn btn-primary" href="mostrarUsuario.php?user_id=<?php echo $_SESSION['user_id']; ?>">Mostrar informació</a>
-        <a class="btn btn-secondary" href="desconectar.php">Desconnectar</a>
+    <div class="container">
         <?php
-    }
-    // Si el rol es profesor, se muestra todos los usuarios de la base de datos en una tabla
-    else if ($_SESSION['rol'] === 'professorat') {
+        // Iniciar la sesión
+        session_start();
+        // Si el usuario ha iniciado sesion correctamente mostrar la información del usuario.
+        if (isset($_SESSION['LoggedIn']) && $_SESSION['LoggedIn']) {
+            // Si el rol es estudiante, se muestra el perfil del estudiante
+            if ($_SESSION['rol'] === 'alumnat') {
         ?>
-        <h2 class="mt-5">Hola <?php echo $_SESSION['name']; ?>, ets un professor</h2>
-        <a class="btn btn-primary" href="mostrarUsuario.php?user_id=<?php echo $_SESSION['user_id']; ?>">Mostrar informació</a>
-        <a class="btn btn-secondary" href="desconectar.php">Desconnectar</a>
-        <?php
-        // Mostrar la tabla de usuarios de la base de datos
-        include 'dbConf.php';
-        // Bloque try-catch para capturar excepciones
-        try{
-            $conn=mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
-            // Comprobar si la conexión es correcta
-            if (!$conn) {
-                throw new Exception("Error de connexió a la base de dades.");
+                <h2 class="mt-5">Hola <?php echo $_SESSION['name']; ?>, ets un alumne</h2>
+                <a class="btn btn-primary" href="mostrarUsuario.php?user_id=<?php echo $_SESSION['user_id']; ?>">Mostrar informació</a>
+                <a class="btn btn-secondary" href="desconectar.php">Desconnectar</a>
+            <?php
             }
-            // Consulta SQL para obtener todos los usuarios de la base de datos
-            $query = "SELECT * FROM user";
-            $resultado = mysqli_query($conn, $query);
-            // Comprobar si la consulta es correcta
-            if (!$resultado) {
-                throw new Exception("Error en la consulta a la base de dades.");
-            }
-            // Si la consulta devuelve un resultado, se muestra la tabla con los usuarios
-            if (mysqli_num_rows($resultado) > 0) {
-                ?>
-                <table class="table table-striped table-hover table-bordered mt-5">
-                    <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Cognom</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Acció</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    foreach ($resultado as $user) {
-                        ?>
-                        <tr>
-                            <td><?php echo $user['name']; ?></td>
-                            <td><?php echo $user['surname']; ?></td>
-                            <td><?php echo $user['email']; ?></td>
-                            <td>
-                                <a class="btn btn-primary btn-sm" href="mostrarUsuario.php?user_id=<?php echo $user['user_id'];?>">Mostrar informació</a>
-                            </td>
-                        </tr>
-                        <?php
-                    }
-                    ?>
-                    </tbody>
-                </table>
+            // Si el rol es profesor, se muestra todos los usuarios de la base de datos en una tabla
+            else if ($_SESSION['rol'] === 'professorat') {
+            ?>
+                <h2 class="mt-5">Hola <?php echo $_SESSION['name']; ?>, ets un professor</h2>
+                <a class="btn btn-primary" href="mostrarUsuario.php?user_id=<?php echo $_SESSION['user_id']; ?>">Mostrar informació</a>
+                <a class="btn btn-secondary" href="desconectar.php">Desconnectar</a>
                 <?php
+                // Mostrar la tabla de usuarios de la base de datos
+                include 'dbConf.php';
+                // Bloque try-catch para capturar excepciones
+                try {
+                    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT);
+                    // Comprobar si la conexión es correcta
+                    if (!$conn) {
+                        throw new Exception("Error de connexió a la base de dades.");
+                    }
+                    // Consulta SQL para obtener todos los usuarios de la base de datos
+                    $query = "SELECT * FROM user";
+                    $resultado = mysqli_query($conn, $query);
+                    // Comprobar si la consulta es correcta
+                    if (!$resultado) {
+                        throw new Exception("Error en la consulta a la base de dades.");
+                    }
+                    // Si la consulta devuelve un resultado, se muestra la tabla con los usuarios
+                    if (mysqli_num_rows($resultado) > 0) {
+                ?>
+                        <table class="table table-striped table-hover table-bordered mt-5">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Cognom</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Acció</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($resultado as $user) {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $user['name']; ?></td>
+                                        <td><?php echo $user['surname']; ?></td>
+                                        <td><?php echo $user['email']; ?></td>
+                                        <td>
+                                            <a class="btn btn-primary btn-sm" href="mostrarUsuario.php?user_id=<?php echo $user['user_id']; ?>">Mostrar informació</a>
+                                            <a class="btn btn-primary btn-sm" href="mostrarUsuario.php?user_id=<?php echo $user['user_id']; ?>">Editar</a>
+
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+        <?php
+                    }
+                } catch (Exception $e) {
+                    echo "Error: " . $e->getMessage();
+                } finally {
+                    // Cerrar la conexión a la base de datos
+                    mysqli_close($conn);
+                }
             }
-        } catch (Exception $e) {
-            echo "Error: " . $e->getMessage();
-        } finally {
-            // Cerrar la conexión a la base de datos
-            mysqli_close($conn);
+        } else {
+            // Si el usuario no ha iniciado sesión, se muestra el formulario de login
+            include '../templates/login.html';
         }
-    }
-    ?>
-</div>
+
+        ?>
+    </div>
 </body>
+
 </html>
