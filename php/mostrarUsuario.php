@@ -4,9 +4,6 @@
 // Incluir el archivo de configuración de la base de datos (dbConf.php)
 include 'dbConf.php';
 
-// Incluir el archivo de cabecera (header.php)
-include "../templates/header.php";
-
 // Definir las constantes para los idiomas (lang_en.php, lang_es.php, lang_ca.php)
 const CATALAN = 'cat';
 const SPANISH = 'es';
@@ -14,9 +11,12 @@ const ENGLISH = 'en';
 
 // Obtener el idioma seleccionado por el usuario (por defecto, catalán)
 $idioma = obtenerIdiomaSeleccionado();
-
 // Incluir el archivo de idioma seleccionado por el usuario
 include "../php/lang/lang_$idioma.php";
+$page_title = $idioma['mostrar_informacion'];
+// Incluir el archivo de cabecera (header.php)
+include "../templates/header.php";
+
 ?>
 
 <body>
