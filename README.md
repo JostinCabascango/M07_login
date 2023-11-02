@@ -2,7 +2,7 @@
 
 Este proyecto es la continuación del proyecto "Alta de Usuarios con PHP y MySQL". En este proyecto, se implementa una funcionalidad adicional para permitir a los usuarios iniciar sesión en el sistema y seleccionar un idioma de preferencia mediante el uso de cookies.
 # Demo del proyecto
-[![Video](Demo del proyecto)](https://drive.google.com/uc?export=view&id=1PpTzvj27zGk31P6q5mVSFzojhwdZuB0o)
+[![Video](https://drive.google.com/uc?export=view&id=1PpTzvj27zGk31P6q5mVSFzojhwdZuB0o)](https://drive.google.com/uc?export=view&id=1PpTzvj27zGk31P6q5mVSFzojhwdZuB0o)
 
 ## Descripción
 
