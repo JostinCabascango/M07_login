@@ -14,6 +14,8 @@ El proyecto consta de tres archivos principales:
 2. `validar.php`: Este archivo se encarga de validar las credenciales del usuario contra la base de datos.
 3. `dbConf.php`: Este archivo contiene las constantes para la conexión a la base de datos.
 4. `index.php`: Este archivo se encarga de mostrar la información del usuario que se encuentra en la base de datos y permite seleccionar un idioma de preferencia mediante cookies.
+5. `mostrarUsuario.php`: Este archivo se encarga de mostrar la información del usuario que se encuentra en la base de datos.
+6. `idioma.php`: Este archivo se encarga de almacenar el idioma seleccionado por el usuario en una cookie.'
 
 ## Selección de Idioma con Cookies
 
