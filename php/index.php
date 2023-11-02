@@ -48,11 +48,11 @@ function mostrarSaludoUsuario($rol)
 
     $saludo = $idioma['saludo'];
     $tipoUsuario = ($rol == 'alumnat') ? $idioma['es_alumno'] : $idioma['es_profesor'];
-    $showLanguageButtons = mostrarBotonesIdioma($idioma);
+    $btn_de_idiomas = mostrarBotonesIdioma($idioma);
     ?>
 
     <h2 class='mt-5'><?php echo "$saludo $name, $tipoUsuario"; ?></h2>
-    <?php echo $showLanguageButtons; ?>
+    <?php echo $btn_de_idiomas; ?>
 
     <div class='mt-3'>
         <a class='btn btn-primary' href='mostrarUsuario.php?user_id=<?php echo $user_id; ?>'><?php echo $idioma['mostrar_informacion']; ?></a>
