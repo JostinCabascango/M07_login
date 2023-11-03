@@ -1,6 +1,8 @@
 # Proyecto de Login y Registro de Usuarios con PHP y MySQL
 
 Este proyecto es la continuación del proyecto "Alta de Usuarios con PHP y MySQL". En este proyecto, se implementa una funcionalidad adicional para permitir a los usuarios iniciar sesión en el sistema y seleccionar un idioma de preferencia mediante el uso de cookies.
+# Demo del proyecto
+[![Video](https://drive.google.com/uc?export=view&id=1PpTzvj27zGk31P6q5mVSFzojhwdZuB0o)](https://drive.google.com/uc?export=view&id=1PpTzvj27zGk31P6q5mVSFzojhwdZuB0o)
 
 ## Descripción
 
@@ -24,32 +26,6 @@ El archivo `index.php` ha sido mejorado para permitir a los usuarios seleccionar
 - Al seleccionar un idioma, se mostrará el contenido de la página en ese idioma.
 - El idioma seleccionado se resaltará en color verde.
 - Al hacer clic en "Eliminar", se eliminarán las cookies y la página volverá al idioma por defecto.
-
-## Capturas de pantalla
-
-### Ejemplo de un usuario cuyo rol es profesor:
-![Ejemplo de un usuario cuyo rol es profesor](img/perfilProfessor.png)
-
-### Ejemplo de un usuario cuyo rol es alumno:
-![Ejemplo de un usuario cuyo rol es alumno](img/perfilAlumno.png)
-
-### Ejemplo de la descripción de un usuario:
-![Ejemplo de la descripción de un usuario](img/descripcionUsuario.png)
-
-### Ejemplo de la URL cuando se pasa el ID del usuario a través del método GET:
-![Ejemplo de la URL cuando se pasa el ID del usuario a través del método GET](img/idPorMetodoGet.png)
-
-### Ejemplo del perfil del profesor en inglés:
-![Ejemplo del perfil del profesor en inglés](img/perfilProfessor_en_ingles.png)
-
-### Ejemplo del perfil del alumno (predeterminado en catalán):
-![Ejemplo del perfil del alumno (predeterminado en catalán)](img/perfilAlumnoCatalan.png)
-
-### Ejemplo del perfil del alumno en inglés:
-![Ejemplo del perfil del alumno en inglés](img/perfilAlumnoIngles.png)
-
-### Ejemplo de la descripción de un usuario en inglés:
-![Ejemplo de la descripción de un usuario en inglés](img/descripcionUsuario_en_ingles.png)
 
 ## Cómo usar
 
